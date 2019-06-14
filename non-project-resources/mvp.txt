@@ -1,0 +1,28 @@
+---Slack---
+- Live chat
+- Channels
+- Direct Message
+- Teams or multi-person DM
+- Bonus: Search Messages
+- Bonus: Notifications
+
+1 New account creation, login, and guest/demo login
+2 A production README
+3 Hosting on Heroku
+
+4 Feature I
+  Adequate styling
+  Smooth, bug-free navigation
+  Adequate and appropriate seeds to demonstrate the feature
+5 Feature II
+  Adequate styling
+  Smooth, bug-free navigation
+  Adequate and appropriate seeds to demonstrate the feature
+6 Feature III
+  Adequate styling
+  Smooth, bug-free navigation
+  Adequate and appropriate seeds to demonstrate the feature
+7 Feature IV
+  Adequate styling
+  Smooth, bug-free navigation
+  Adequate and appropriate seeds to demonstrate the feature
