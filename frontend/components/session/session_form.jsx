@@ -1,5 +1,6 @@
 import React from "react";
 // import SplashDefaultLinks 
+import SplashLogo from "../splash/splash_logo";
 import { Link, withRouter } from "react-router-dom";
 
 class SessionForm extends React.Component {
@@ -25,9 +26,9 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul>
+      <ul className="session-errors">
         {this.props.errors.map((error, idx) => (
-          <li key={`error-${idx}`}>{error}</li>
+          <li className="session-error-message" key={`error-${idx}`}>{error}</li>
         ))}
       </ul>
     );
@@ -35,12 +36,12 @@ class SessionForm extends React.Component {
 
   render() {
 
-    const {formType} = this.props;
+    const {formType, errors} = this.props;
 
     const sessionForm = (
       <> 
-        <h1>{ formType }</h1>
-        <h4> Enter your email and password</h4>
+        <h1>{ formType } to your workspace</h1>
+        <p>Enter your email and password</p>
         <input 
           className="session-form-email"
           type="text"
@@ -57,26 +58,30 @@ class SessionForm extends React.Component {
           placeholder="Password"
         />
         <br />
-        <button 
-            className="session-form-login"
-            onClick={this.handleSubmit}
-          >
-            {formType}
-        </button>
+        <input 
+          className="session-form-login"
+          id="splash-button"
+          type="submit"
+          onClick={this.handleSubmit}
+          value={formType}       
+        />
       </>
     )
 
-    const sessionStarter = formtype === "Log In" ? (
+    const errorMessages = (errors.length) ? this.renderErrors() : (<></>)
+
+    const sessionStarter = formType === "Log In" ? (
       <nav className = "session-content">
-        {this.renderErrors()}
-      <form className = "session-form">
-        {sessionForm}
-        {/* Demo users goes here? */}
-      </form>
+        {errorMessages}
+        <form className = "session-form">
+          {sessionForm}
+          <br></br>
+          Demo users goes here?
+        </form>
       </nav>
     ) : (
       <nav className="session-content">
-        {this.renderErrors()}
+        {errorMessages}
         <form className="session-form">
           {sessionForm}
         </form>
@@ -84,14 +89,16 @@ class SessionForm extends React.Component {
     )
 
     return (
-      <div>
-        <header className="splash-header">
-
-          <nav className="splash-session-nav">
-            <Link to="/login">Log In</Link>
-            <Link to="/signup">GET STARTED</Link>
+      <div className="session-page">
+        <div id="session-header">
+        <header className="splash-header" id="login">
+          <SplashLogo />
+          <nav className="splash-header-right">
+            <Link className="splash-header-login" to="/login">Sign In</Link>
+            <Link className="splash-header-getstarted" id="splash-button" to="/signup">GET STARTED</Link>
           </nav>
         </header>
+        </div>
         {sessionStarter}
       </div>
     )

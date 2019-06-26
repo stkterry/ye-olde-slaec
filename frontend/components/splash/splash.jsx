@@ -1,9 +1,8 @@
 import React from "react";
 import SplashDefaultLinks from "./splash_default_links";
+// import SplashLogo from "./splash_logo";
 import { Link } from "react-router-dom";
 
-// import Sig
-// import SessionForm from "../session/session_form";
 
 class Splash extends React.Component {
   constructor(props) {
@@ -25,6 +24,7 @@ class Splash extends React.Component {
         <SplashDefaultLinks />
         <nav className="splash-header-right">
           <button>Future Workspaces Button</button>
+          <button onClick={logout}>Temp Logout Button</button>
         </nav>
       </header>
     ):(
@@ -32,7 +32,7 @@ class Splash extends React.Component {
         <SplashDefaultLinks />
         <nav className="splash-header-right">
           <Link className="splash-header-login" to="/login">Sign In</Link>
-          <Link className="splash-header-login" to="/signup">GET STARTED</Link>
+          <Link className="splash-header-getstarted" id="splash-button" to="/signup">GET STARTED</Link>
         </nav>
       </header>
     );
@@ -41,7 +41,32 @@ class Splash extends React.Component {
       <div>
         { splashHeader }
         <div className="splash-body">
-          <p>Some Stuff Here Always</p>
+          <section className="splash-body-hero">
+
+            <div className="splash-body-hero-content">
+              <div className="splash-body-hero-background">
+                <img src={window.yellowChatIconURL} className="hero-icon" id="yellow-chat-icon" />
+                <img src={window.zendeskIconURL} className="hero-icon" id="zendesk-icon" />
+                <img src={window.greenChatIconURL} className="hero-icon" id="green-chat-icon" />
+                <img src={window.asanaIconURL} className="hero-icon" id="asana-icon" />
+              </div>
+              <header className="splash-body-hero-header">
+                <h1>Whatever work you do, you can do it in Slaec</h1>
+                <p id="h1-follower">Slaec gives your team the power and alignment you need to do your best work.</p>
+                  <form className="splash-body-hero-header-form">
+                    <input type="text" placeholder="Your work email"></input>
+                    <Link id="splash-button" to="/signup">     TRY FOR FREE     </Link>
+                  </form>
+                <p id="form-follower">Already using Slaec? <Link to="/login">Sign in.</Link></p>
+              </header>
+            </div>
+
+          </section>
+
+          <section className="splash-body-section">
+            <h2>Put collaboration at your fingertips</h2>
+          </section>
+
         </div>
 
 
@@ -53,30 +78,3 @@ class Splash extends React.Component {
 }
 
 export default Splash;
-
-// const Greeting = ({ currentUser, logout }) => {
-//   const loggedInMessage = () => (
-//     <div className="loggedInMessage">
-//       <h3 className="loggedInMessage-H3">
-//         Greeting Test, {currentUser.username}
-//       </h3>
-//       <button
-//         className="loggedInMessage-button"
-//         onClick={logout}
-//       >Logout!
-//       </button>
-//     </div>
-//   )
-//   const loggedOutMessage = () => (
-//     <nav className="loggedOutMessage">
-//       <Link to="/login">Login</Link>
-//       <p> or </p>
-//       <Link to="/logout">Logout</Link>
-//     </nav>
-//   )
-
-//   return currentUser ? loggedInMessage() : loggedOutMessage();
-
-// };
-
-// export default Greeting;

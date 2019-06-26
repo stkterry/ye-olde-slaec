@@ -1,0 +1,109 @@
+
+.splash-body {
+}
+
+
+.splash-body-hero-background{
+  /* height: 0; */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+.hero-icon{
+  width: 22px;
+  position: relative;
+}
+.splash-body-hero-background #yellow-chat-icon {
+  left: -55%;
+  top: 2%;
+}
+.splash-body-hero-background #zendesk-icon {
+  left: -65%;
+  top: 45%;
+}
+.splash-body-hero-background #green-chat-icon {
+  left: 60%;
+  top: 13%;
+}
+.splash-body-hero-background #asana-icon {
+  left: -35%;
+  top: 110%;
+}
+
+.splash-body-hero{
+  height: 420px;
+  padding: 10px 0 80px 0;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  font-size: 20px;
+}
+
+.splash-body-hero-content {
+  margin: 0 auto;
+  padding-top: 64px;
+  padding-bottom: 64px;
+  position: relative;
+}
+
+.splash-body-hero-header {
+  max-width: 940px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-body-hero-header > * {
+  margin-bottom: 18px;
+}
+
+.splash-body-hero-header-form {
+  margin: 15px;
+}
+.splash-body-hero-header-form #splash-button {
+  padding: 18px;
+}
+.splash-body-hero-header-form > input {
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 4px;
+  margin-right: 8px;
+}
+.splash-body-hero-header-email {
+  border-radius: 4px;
+  box-shadow: none;
+  box-sizing: border-box;
+}
+
+.splash-body-hero-header #form-follower {
+  font-size: 14px;
+}
+.splash-body-hero-header #form-follower > a {
+  text-decoration: none;
+  color: var(--linkBlue);
+  border-bottom: 1px solid var(--linkBlue);
+}
+.splash-body-hero-header #form-follower > a:hover {
+  border-bottom: 2px solid;
+}
+
+.splash-body-hero-header > h1 {
+  max-width: 730px;
+  font-weight: bold;
+  font-size: 64px;
+}
+
+
+.splash-body-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.splash-body-section > h2 {
+  font-weight: bolder;
+  font-size: 50px;
+}

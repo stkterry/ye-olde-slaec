@@ -1,0 +1,76 @@
+#session-header {
+  background: white;
+  width: 100%;
+  border-bottom: 1px solid lightgray;
+  box-shadow: 0px 0px 2px lightgray;
+}
+
+.session-page {
+  display: block;
+  background: var(--signinWhite);
+  /* border-top: 1px solid lightgray; */
+  height: 100vh;
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center; 
+}
+
+.session-form {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  flex-direction: column;
+  margin: 25px auto;
+  height: 420px;
+  /* width: 100%; */
+  /* max-width: 640px; */
+  width: 640px;
+}
+
+.session-form > h1 {
+  font-weight: bold;
+  font-size: 32px;
+  margin-bottom: 16px;
+}
+
+.session-form > p {
+  margin-bottom: 16px;
+}
+
+.session-form > input {
+  text-decoration: none;
+  padding: 16px 40px;
+  border-radius: 4px;
+  /* margin-right: 8px; */
+}
+.session-form > input[type="text"]::placeholder,
+.session-form > input[type="password"]::placeholder  {
+  text-align: center;
+}
+
+.session-form-login#splash-button {
+  width: 231px;
+  height: 50px;
+  /* padding: 16px 98px; */
+  background: var(--signinGreen);
+  border: 0;
+}
+
+.session-errors {
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  background: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-top: 2%;
+  margin-bottom: -25px;
+  height: 50px;
+  width: 395px;
+  border-left: solid #e01e5a 5px;
+}

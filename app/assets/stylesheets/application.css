@@ -13,3 +13,26 @@
  *= require_tree .
  *= require_self
  */
+
+ /* Custom Colors... */
+:root {
+  --headerGray: #454545;
+  --signinWhite: #f8f8f8;
+  --purple: #611f69;
+  --linkBlue: #1264a3;
+  --signinGreen: #007a5a;
+}
+
+input:focus {
+  outline: none;
+}
+input {
+  border: 1px solid black;
+  text-align: center;
+}
+
+* {
+	font-family: 'Lato', sans-serif;
+	letter-spacing: 0.25px;
+}
+
