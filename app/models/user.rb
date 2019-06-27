@@ -24,6 +24,27 @@ class User < ApplicationRecord
   after_initialize :ensure_session_token  
   attr_reader :password
 
+  has_many :messages,
+    class_name: :Message,
+    primary_key: :id,
+    foreign_key: :message_id
+  
+  has_many :created_channels,
+    class_name: :Channel,
+    primary_key: :id,
+    foreign_key: :created_by
+  
+  has_many :subscriptions,
+    class_name: :Subscriber,
+    primary_key: :id,
+    foreign_key: :user_id
+
+  has_many :reactions,
+    class_name: :Reaction,
+    primary_key: :id,
+    foreign_key: :author_id;
+
+
   def self.find_by_credentials(email, password)
     user = User.find_by(email: email)
     return nil unless user

@@ -21,6 +21,7 @@
   --purple: #611f69;
   --linkBlue: #1264a3;
   --signinGreen: #007a5a;
+  --errorRed: #e01e5a;
 }
 
 input:focus {

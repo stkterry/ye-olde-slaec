@@ -1,10 +1,12 @@
+@keyframes fadein {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
 
 .splash-body {
 }
 
-
 .splash-body-hero-background{
-  /* height: 0; */
   position: absolute;
   top: 0;
   left: 0;
@@ -15,7 +17,12 @@
 .hero-icon{
   width: 22px;
   position: relative;
+  animation: fadein 2s;
+  animation-delay: 250ms;
+  animation-fill-mode: both;
 }
+
+
 .splash-body-hero-background #yellow-chat-icon {
   left: -55%;
   top: 2%;

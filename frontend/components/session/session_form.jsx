@@ -32,7 +32,7 @@ class SessionForm extends React.Component {
   renderErrors() {
     return (
       <div className="session-errors-body"> 
-        <img src={window.sessionErrorURL} />
+        <i className="fa fa-warning"/>
         <ul className="session-errors">
           {this.props.errors.map((error, idx) => (
             <li className="session-error-message" key={`error-${idx}`}>{error}</li>

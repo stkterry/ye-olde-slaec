@@ -2,6 +2,7 @@ import React from "react";
 import SplashDefaultLinks from "./splash_default_links";
 // import SplashLogo from "./splash_logo";
 import { Link } from "react-router-dom";
+import myMove from "../../util/splash-animations";
 
 
 class Splash extends React.Component {
@@ -14,6 +15,10 @@ class Splash extends React.Component {
 
   update(field) {
     return event => this.setState({ [field]: event.target.value })
+  }
+
+  componentDidMount() {
+    myMove("yellow-chat-icon");
   }
 
   render() {
