@@ -9,6 +9,7 @@ export const RECEIVE_CURRENT_USER = 'RECEIVE_CURRENT_USER';
 export const DELETE_CURRENT_USER = 'DELETE_CURRENT_USER';
 export const LOGOUT_CURRENT_USER = 'LOGOUT_CURRENT_USER';
 export const RECEIVE_ERRORS = 'RECEIVE_ERRORS';
+export const CLEAR_ERRORS = 'CLEAR_ERRORS';
 
 const receiveCurrentUser = currentUser => ({
   type: RECEIVE_CURRENT_USER,
@@ -26,6 +27,10 @@ const deleteCurrentUser = () => ({
 const receiveErrors = errors => ({
   type: RECEIVE_ERRORS,
   errors: errors.responseJSON
+});
+
+export const clearErrors = () =>({
+  type: CLEAR_ERRORS
 });
 
 export const signup = user => dispatch => postUser(user)
@@ -51,6 +56,3 @@ export const logout = () => dispatch => deleteSession()
     () => dispatch(logoutCurrentUser()),
     errors => dispatch(receiveErrors(errors))
   )
-
-
-

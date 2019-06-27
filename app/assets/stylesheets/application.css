@@ -26,6 +26,12 @@
 input:focus {
   outline: none;
 }
+
+input:hover {
+  
+}
+
+
 input {
   border: 1px solid black;
   text-align: center;

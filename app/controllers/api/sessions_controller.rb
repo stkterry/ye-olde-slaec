@@ -9,7 +9,7 @@ class Api::SessionsController < ApplicationController
       login(@user)
       render "api/users/show"
     else
-      render json: ["You've mistyped your username or password."], status: 401
+      render json: ["You've mistyped your email or password."], status: 401
     end
   end
 

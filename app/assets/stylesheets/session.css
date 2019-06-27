@@ -8,7 +8,6 @@
 .session-page {
   display: block;
   background: var(--signinWhite);
-  /* border-top: 1px solid lightgray; */
   height: 100vh;
   display: flex;
   margin: 0 auto;
@@ -27,9 +26,7 @@
   flex-direction: column;
   margin: 25px auto;
   height: 420px;
-  /* width: 100%; */
-  /* max-width: 640px; */
-  width: 640px;
+  width: 600px;
 }
 
 .session-form > h1 {
@@ -46,7 +43,6 @@
   text-decoration: none;
   padding: 16px 40px;
   border-radius: 4px;
-  /* margin-right: 8px; */
 }
 .session-form > input[type="text"]::placeholder,
 .session-form > input[type="password"]::placeholder  {
@@ -56,21 +52,47 @@
 .session-form-login#splash-button {
   width: 231px;
   height: 50px;
-  /* padding: 16px 98px; */
   background: var(--signinGreen);
   border: 0;
+  cursor: pointer;
 }
 
-.session-errors {
+.demo-user {
+  width: 231;
+
+  margin-top: 15px;
+  background: var(--signinGreen);
+  border: 0;
+  cursor: pointer;
+
+  /* padding: 14px 16px; */
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  align-self: center;
+  border-radius: 4px;
+}
+
+.session-errors-body {
+  font-family: 'Noto Sans', sans-serif;
   border: 1px solid lightgray;
   border-radius: 4px;
   background: white;
   display: flex;
-  justify-content: flex-start;
   align-items: center;
   margin-top: 2%;
-  margin-bottom: -25px;
-  height: 50px;
-  width: 395px;
+  margin-bottom: -10px;
+  width: 600px;
+  padding: 10px 0;
   border-left: solid #e01e5a 5px;
+}
+
+.session-errors {
+}
+
+.session-error-message {
+  font-size: 14px;
+  padding: 0 0 1% 3%;
+  width: 100%;
+
 }

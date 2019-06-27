@@ -3,14 +3,10 @@
   margin: 0 auto;
   display: flex;
   align-items: center;
-  width: 1235px;
+  max-width: 1235px;
   height: 70px;
   padding: 0 4vw;
 }
-
-/* .splash-header > * {
-  /* padding: 19px;
-} */
 
 .splash-header:hover > * {
   cursor: pointer;

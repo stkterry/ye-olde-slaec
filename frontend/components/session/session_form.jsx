@@ -8,7 +8,12 @@ class SessionForm extends React.Component {
     super(props);
     this.state = { email: "", password: ""}
     this.handleSubmit = this.handleSubmit.bind(this);
+    this.demoUser = this.demoUser.bind(this);
   };
+
+  componentWillUnmount() {
+    this.props.clearErrors();
+  }
 
 
   update(field) {
@@ -26,12 +31,21 @@ class SessionForm extends React.Component {
 
   renderErrors() {
     return (
-      <ul className="session-errors">
-        {this.props.errors.map((error, idx) => (
-          <li className="session-error-message" key={`error-${idx}`}>{error}</li>
-        ))}
-      </ul>
+      <div className="session-errors-body"> 
+        <img src={window.sessionErrorURL} />
+        <ul className="session-errors">
+          {this.props.errors.map((error, idx) => (
+            <li className="session-error-message" key={`error-${idx}`}>{error}</li>
+          ))}
+        </ul>    
+      </div>
+
     );
+  }
+
+  demoUser(event) {
+    event.preventDefault();
+    this.props.processForm({ email: "demo@user.com", password: "password" })
   }
 
   render() {
@@ -71,12 +85,11 @@ class SessionForm extends React.Component {
     const errorMessages = (errors.length) ? this.renderErrors() : (<></>)
 
     const sessionStarter = formType === "Log In" ? (
-      <nav className = "session-content">
+      <nav className="session-content">
         {errorMessages}
-        <form className = "session-form">
+        <form className="session-form">
           {sessionForm}
-          <br></br>
-          Demo users goes here?
+          <input className="demo-user" onClick={this.demoUser} value="Demo User" readOnly></input>
         </form>
       </nav>
     ) : (
