@@ -1,15 +1,13 @@
 import React from "react";
 import SplashDefaultLinks from "./splash_default_links";
-// import SplashLogo from "./splash_logo";
 import { Link } from "react-router-dom";
-import myMove from "../../util/splash-animations";
+import splashAnimIcon from "../../util/splash-animations";
 
 
 class Splash extends React.Component {
   constructor(props) {
     super(props);
     this.state = { email: ""};
-
     this.update = this.update.bind(this);
   }
 
@@ -18,7 +16,21 @@ class Splash extends React.Component {
   }
 
   componentDidMount() {
-    myMove("yellow-chat-icon");
+    splashAnimIcon("yellow-chat-icon", 1.0);
+    splashAnimIcon("zendesk-icon", -1.0);
+    splashAnimIcon("dropbox-icon", -1.0);
+    splashAnimIcon("asana-icon", -1.0);
+    splashAnimIcon("green-chat-icon", -1.0);
+    splashAnimIcon("blue-chat-icon", -1.0);
+    splashAnimIcon("hubspot-icon", 1.0);
+    splashAnimIcon("atlassian-icon", 1.0);
+    splashAnimIcon("google-icon", 1.0);
+    splashAnimIcon("zoom-icon", -1.0);
+    splashAnimIcon("red-chat-icon", 1.0);
+    splashAnimIcon("yellow-chat-icon-2", -1.0);
+    splashAnimIcon("green-chat-icon-2", -1.0);
+    splashAnimIcon("blue-chat-icon-2", 1.0);
+    splashAnimIcon("red-chat-icon-2", -1.0);
   }
 
   render() {
@@ -54,6 +66,17 @@ class Splash extends React.Component {
                 <img src={window.zendeskIconURL} className="hero-icon" id="zendesk-icon" />
                 <img src={window.greenChatIconURL} className="hero-icon" id="green-chat-icon" />
                 <img src={window.asanaIconURL} className="hero-icon" id="asana-icon" />
+                <img src={window.dropboxIconURL} className="hero-icon" id="dropbox-icon" />
+                <img src={window.blueChatIconURL} className="hero-icon" id="blue-chat-icon" />
+                <img src={window.hubspotIconURL} className="hero-icon" id="hubspot-icon" />
+                <img src={window.atlassianIconURL} className="hero-icon" id="atlassian-icon" />
+                <img src={window.googleIconURL} className="hero-icon" id="google-icon" />
+                <img src={window.zoomIconURL} className="hero-icon" id="zoom-icon" />
+                <img src={window.redChatIconURL} className="hero-icon" id="red-chat-icon" />
+                <img src={window.yellowChatIconURL} className="hero-icon" id="yellow-chat-icon-2" />
+                <img src={window.greenChatIconURL} className="hero-icon" id="green-chat-icon-2" />
+                <img src={window.blueChatIconURL} className="hero-icon" id="blue-chat-icon-2" />
+                <img src={window.redChatIconURL} className="hero-icon" id="red-chat-icon-2" />
               </div>
               <header className="splash-body-hero-header">
                 <h1>Whatever work you do, you can do it in Slaec</h1>

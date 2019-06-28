@@ -24,7 +24,7 @@
 
 
 .splash-body-hero-background #yellow-chat-icon {
-  left: -55%;
+  left: -45%;
   top: 2%;
 }
 .splash-body-hero-background #zendesk-icon {
@@ -32,12 +32,56 @@
   top: 45%;
 }
 .splash-body-hero-background #green-chat-icon {
-  left: 60%;
+  left: 65%;
   top: 13%;
 }
 .splash-body-hero-background #asana-icon {
-  left: -35%;
-  top: 110%;
+  left: -15%;
+  top: 100%;
+}
+.splash-body-hero-background #dropbox-icon {
+  left: 15%;
+  top: 90%;
+}
+.splash-body-hero-background #blue-chat-icon {
+  left: -95%;
+  top: 15%;
+}
+.splash-body-hero-background #hubspot-icon {
+  left: 70%;
+  top: 55%;
+}
+.splash-body-hero-background #atlassian-icon {
+  left: 80%;
+  top: 10%;
+}
+.splash-body-hero-background #google-icon {
+  left: -55%;
+  top: 80%;
+}
+.splash-body-hero-background #zoom-icon {
+  left: -85%;
+  top: 20%;
+}
+.splash-body-hero-background #red-chat-icon {
+  left: -95%;
+  top: 90%;
+}
+.splash-body-hero-background #yellow-chat-icon-2 {
+  left: 85%;
+  top: 80%;
+}
+.splash-body-hero-background #green-chat-icon-2 {
+  left: -120%;
+  top: 100%;
+}
+.splash-body-hero-background #blue-chat-icon-2 {
+  left: 55%;
+  top: 90%;
+}
+.splash-body-hero-background #red-chat-icon-2 {
+  left: 85%;
+  top: 30%;
 }
 
 .splash-body-hero{

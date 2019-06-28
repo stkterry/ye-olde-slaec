@@ -1,20 +1,20 @@
 
 
-export const fetchMessages = channelId => (
+export const getMessages = channelId => (
   $.ajax({
     method: "GET",
     url: `/api/channels/${channelId}/messages`
   })
 );
 
-export const fetchMessage = (channelId, id) => (
+export const getMessage = (channelId, id) => (
   $.ajax({
     method: "GET",
     url: `/api/channels/${channelId}/messages/${id}`
   })
 )
 
-export const createMessage = (channelId, message) => (
+export const postMessage = (channelId, message) => (
   $.ajax({
     method: "POST",
     url: `/api/channels/${channelId}/messages`,
@@ -22,7 +22,7 @@ export const createMessage = (channelId, message) => (
   })
 );
 
-export const updateMessage = (channelId, message) => (
+export const patchMessage = (channelId, message) => (
   $.ajax({
     method: "PATCH",
     url: `/api/channels/${channelId}/messages/${message.id}`

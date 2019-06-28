@@ -1,20 +1,20 @@
 
 
-export const fetchChannels = () => (
+export const getChannels = () => (
   $.ajax({
     method: "GET",
     url: "/api/channels"
   })
 );
 
-export const fetchChannel = id => (
+export const getChannel = id => (
   $.ajax({
     method: "GET",
     url: `/api/channels/${id}`
   })
 );
 
-export const createChannel = channel => (
+export const postChannel = channel => (
   $.ajax({
     method: "POST",
     url: "/api/channels",
@@ -22,7 +22,7 @@ export const createChannel = channel => (
   })
 );
 
-export const updateChannel = channel => (
+export const patchChannel = channel => (
   $.ajax({
     method: "PATCH",
     url: `/api/channels/${channel.id}`,
