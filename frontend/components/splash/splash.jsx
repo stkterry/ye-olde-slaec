@@ -49,7 +49,7 @@ class Splash extends React.Component {
         <SplashDefaultLinks />
         <nav className="splash-header-right">
           <Link className="splash-header-login" to="/login">Sign In</Link>
-          <Link className="splash-header-getstarted" id="splash-button" to="/signup">GET STARTED</Link>
+          <Link className="splash-header-getstarted splash-button"to="/signup">GET STARTED</Link>
         </nav>
       </header>
     );
@@ -82,8 +82,8 @@ class Splash extends React.Component {
                 <h1>Whatever work you do, you can do it in Slaec</h1>
                 <p id="h1-follower">Slaec gives your team the power and alignment you need to do your best work.</p>
                   <form className="splash-body-hero-header-form">
-                    <input type="text" placeholder="Your work email"></input>
-                    <Link id="splash-button" to="/signup">     TRY FOR FREE     </Link>
+                    <input className="splash-button" type="text" placeholder="Your work email"></input>
+                    <Link className="splash-button" to="/signup">     TRY FOR FREE     </Link>
                   </form>
                 <p id="form-follower">Already using Slaec? <Link to="/login">Sign in.</Link></p>
               </header>

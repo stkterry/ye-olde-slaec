@@ -49,13 +49,13 @@
   text-align: center;
 }
 
-.session-form-login#splash-button {
+.session-form-login.splash-button {
   width: 231px;
   height: 50px;
   background: var(--signinGreen);
   border: 0;
-  cursor: pointer;
 }
+
 
 .demo-user {
   width: 231;
@@ -91,9 +91,6 @@
   color: var(--errorRed);
   margin-left: 7px;
   font-size: 28px;
-}
-
-.session-errors {
 }
 
 .session-error-message {

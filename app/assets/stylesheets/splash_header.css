@@ -29,20 +29,9 @@
   padding: 0;
 }
 
-.splash-header-login, #splash-button {
+.splash-header-login {
   text-decoration: none;
   font-weight: normal;
   color: var(--headerGray);
   padding: 16px;
-}
-
-#splash-button {
-  padding: 14px 16px;
-  /* letter-spacing: .8px; */
-  font-size: 14px;
-  font-weight: bold;
-  color: white;
-  background: var(--purple);
-  align-self: center;
-  border-radius: 4px;
 }

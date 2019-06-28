@@ -73,8 +73,7 @@ class SessionForm extends React.Component {
         />
         <br />
         <input 
-          className="session-form-login"
-          id="splash-button"
+          className="session-form-login splash-button"
           type="submit"
           onClick={this.handleSubmit}
           value={formType}       
@@ -108,7 +107,7 @@ class SessionForm extends React.Component {
           <SplashLogo />
           <nav className="splash-header-right">
             <Link className="splash-header-login" to="/login">Sign In</Link>
-            <Link className="splash-header-getstarted" id="splash-button" to="/signup">GET STARTED</Link>
+            <Link className="splash-header-getstarted splash-button" to="/signup">GET STARTED</Link>
           </nav>
         </header>
         </div>

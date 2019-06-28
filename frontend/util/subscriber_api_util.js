@@ -1,6 +1,6 @@
 
 
-export const createSubscriber = (channelId, subscriber) => (
+export const postSubscriber = (channelId, subscriber) => (
   $.ajax({
     method: "POST",
     url: `/api/channels/${channelId}/subscribers`,

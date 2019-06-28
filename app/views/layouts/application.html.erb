@@ -15,9 +15,9 @@
     window.zoomIconURL = "<%= image_url('wiggles/zoom-icon.png')%>"
     window.redChatIconURL = "<%= image_url('wiggles/red-chat-icon.png')%>"
     window.sessionErrorURL = "<%= image_url('session-error.png')%>"
-
   </script>
 
+  <%= favicon_link_tag asset_path('slaec-fav.png') %>
   
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.0/css/all.css" integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ" crossorigin="anonymous">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -25,7 +25,7 @@
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans&display=swap" rel="stylesheet">
 
   <head>
-    <title>YeOldeSlaec</title>
+    <title>Does a thing | Slaec</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
 

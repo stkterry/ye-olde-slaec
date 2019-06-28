@@ -110,19 +110,23 @@
 .splash-body-hero-header > * {
   margin-bottom: 18px;
 }
-
 .splash-body-hero-header-form {
   margin: 15px;
 }
-.splash-body-hero-header-form #splash-button {
-  padding: 18px;
-}
-.splash-body-hero-header-form > input {
-  text-decoration: none;
-  padding: 16px 40px;
-  border-radius: 4px;
+.splash-body-hero-header-form > input.splash-button {
+  padding: 20px 40px;
+  background: white;
+  border-color: var(--purple);
+  color: black;
   margin-right: 8px;
+  font-weight: normal;
+  cursor: auto;
 }
+.splash-body-hero-header-form > a.splash-button {
+  padding: 21px 40px;
+}
+
+
 .splash-body-hero-header-email {
   border-radius: 4px;
   box-shadow: none;
@@ -147,7 +151,6 @@
   font-size: 64px;
 }
 
-
 .splash-body-section {
   display: flex;
   flex-direction: column;
@@ -157,4 +160,18 @@
 .splash-body-section > h2 {
   font-weight: bolder;
   font-size: 50px;
+}
+
+
+.splash-button {
+  cursor: pointer;
+  padding: 14px 16px;
+  font-size: 14px;
+  font-weight: bold;
+  color: white;
+  background: var(--purple);
+  align-self: center;
+  border-radius: 4px;
+  text-decoration: none;
+  /* padding: 16px; */
 }
