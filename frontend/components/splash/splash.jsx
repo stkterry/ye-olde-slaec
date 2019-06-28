@@ -15,23 +15,23 @@ class Splash extends React.Component {
     return event => this.setState({ [field]: event.target.value })
   }
 
-  // componentDidMount() {
-  //   splashAnimIcon("yellow-chat-icon", 1.0);
-  //   splashAnimIcon("zendesk-icon", -1.0);
-  //   splashAnimIcon("dropbox-icon", -1.0);
-  //   splashAnimIcon("asana-icon", -1.0);
-  //   splashAnimIcon("green-chat-icon", -1.0);
-  //   splashAnimIcon("blue-chat-icon", -1.0);
-  //   splashAnimIcon("hubspot-icon", 1.0);
-  //   splashAnimIcon("atlassian-icon", 1.0);
-  //   splashAnimIcon("google-icon", 1.0);
-  //   splashAnimIcon("zoom-icon", -1.0);
-  //   splashAnimIcon("red-chat-icon", 1.0);
-  //   splashAnimIcon("yellow-chat-icon-2", -1.0);
-  //   splashAnimIcon("green-chat-icon-2", -1.0);
-  //   splashAnimIcon("blue-chat-icon-2", 1.0);
-  //   splashAnimIcon("red-chat-icon-2", -1.0);
-  // }
+  componentDidMount() {
+    splashAnimIcon("yellow-chat-icon", 1.0);
+    splashAnimIcon("zendesk-icon", -1.0);
+    splashAnimIcon("dropbox-icon", -1.0);
+    splashAnimIcon("asana-icon", -1.0);
+    splashAnimIcon("green-chat-icon", -1.0);
+    splashAnimIcon("blue-chat-icon", -1.0);
+    splashAnimIcon("hubspot-icon", 1.0);
+    splashAnimIcon("atlassian-icon", 1.0);
+    splashAnimIcon("google-icon", 1.0);
+    splashAnimIcon("zoom-icon", -1.0);
+    splashAnimIcon("red-chat-icon", 1.0);
+    splashAnimIcon("yellow-chat-icon-2", -1.0);
+    splashAnimIcon("green-chat-icon-2", -1.0);
+    splashAnimIcon("blue-chat-icon-2", 1.0);
+    splashAnimIcon("red-chat-icon-2", -1.0);
+  }
 
   render() {
     const { currentUser, logout } = this.props;
