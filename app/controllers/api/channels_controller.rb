@@ -38,6 +38,7 @@ class Api::ChannelsController < ApplicationController
       render :show
     else
       render json: @channel.errors.full_messages, status: 422
+    end
   end
 
   def destroy
