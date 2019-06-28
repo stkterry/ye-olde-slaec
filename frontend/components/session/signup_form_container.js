@@ -6,6 +6,7 @@ import { signup, clearErrors } from "../../actions/session_actions";
 import SessionForm from "./session_form";
 
 const mSP = (state, ownProps) => ({
+  own: state,
   errors: state.errors.session,
   formType: 'Sign Up',
   linkTo: <Link to="/login"> Sign up</Link>

@@ -1,0 +1,1 @@
+json.partial! "/api/subscribers/subscriber", subscriber: @subscriber

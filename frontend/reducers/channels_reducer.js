@@ -2,7 +2,7 @@ import {
   RECEIVE_ALL_CHANNELS,
   RECEIVE_CHANNEL,
   REMOVE_CHANNEL
-} from "../util/channel_api_util";
+} from "../actions/channel_actions";
 import merge from "lodash/merge";
 
 export default (state = {}, action) => {
@@ -21,3 +21,4 @@ export default (state = {}, action) => {
       return state;
   }
 }
+

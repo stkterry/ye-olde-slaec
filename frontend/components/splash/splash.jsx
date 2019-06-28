@@ -1,6 +1,6 @@
 import React from "react";
 import SplashDefaultLinks from "./splash_default_links";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import splashAnimIcon from "../../util/splash-animations";
 
 
@@ -9,10 +9,17 @@ class Splash extends React.Component {
     super(props);
     this.state = { email: ""};
     this.update = this.update.bind(this);
+
+    this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   update(field) {
     return event => this.setState({ [field]: event.target.value })
+  }
+
+  handleSubmit(event) {
+    event.preventDefault();
+    return <Redirect to="/signup" />;
   }
 
   componentDidMount() {
@@ -82,8 +89,8 @@ class Splash extends React.Component {
                 <h1>Whatever work you do, you can do it in Slaec</h1>
                 <p id="h1-follower">Slaec gives your team the power and alignment you need to do your best work.</p>
                   <form className="splash-body-hero-header-form">
-                    <input className="splash-button" type="text" placeholder="Your work email"></input>
-                    <Link className="splash-button" to="/signup">     TRY FOR FREE     </Link>
+                    <input className="splash-button" type="text" placeholder="Your work email" onChange={this.update("email")}></input>
+                    <Link className="splash-button" to={{pathname: '/signup', state: {email: this.state.email}}}>     TRY FOR FREE     </Link>
                   </form>
                 <p id="form-follower">Already using Slaec? <Link to="/login">Sign in.</Link></p>
               </header>

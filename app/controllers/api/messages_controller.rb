@@ -1,15 +1,15 @@
 
 class Api::MessagesController < ApplicationController
 
-  before_action :require_login
+  # before_action :require_login
 
   def index
-    @messages = Message.all.includes(:user)
+    @messages = Message.all.includes(:author)
     render :index
   end
 
   def show
-    @message = Message.includes(:user).find_by(id: params[:id])
+    @message = Message.includes(:author).find_by(id: params[:id])
     render :show
   end
 

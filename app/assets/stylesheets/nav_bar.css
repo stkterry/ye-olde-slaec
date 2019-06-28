@@ -1,0 +1,29 @@
+
+.nav_bar {
+  width: 223px;
+  height: 100vw;
+  background: var(--navBarBlue);
+  color: var(--navBarGray);
+  box-sizing: border-box;
+  padding: 16px;
+
+}
+
+#team_menu-top {
+  display:flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+#team_menu-top h1 {
+  font-size: 1.125rem;
+  font-weight: bold;
+  color: white;
+}
+#team_menu-top i {
+  font-size: 20px;
+}
+
+#team_menu-bottom {
+  display: flex;
+  justify-content: space-between;
+}

@@ -3,7 +3,7 @@ import {
   getMessage,
   postMessage,
   patchMessage,
-  deleteMessage
+  deleteMessage as delMessage
 } from "../util/message_api_util";
 
 export const RECEIVE_ALL_MESSAGES = "RECEIVE_ALL_MESSAGES";
@@ -37,5 +37,5 @@ export const createMessage = (channelId, message) => dispatch => postMessage(cha
 export const updateMessage = (channelId, message) => dispatch => patchMessage(channelId, message)
   .then(message => dispatch(receiveMessage(message)));
 
-export const deleteMessage = (channelId, id) => dispatch => deleteMessage(channelId, id)
+export const deleteMessage = (channelId, id) => dispatch => delMessage(channelId, id)
   .then( () => dispatch(removeMessage(id)));

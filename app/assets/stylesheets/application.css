@@ -22,6 +22,9 @@
   --linkBlue: #1264a3;
   --signinGreen: #007a5a;
   --errorRed: #e01e5a;
+
+  --navBarBlue: #303E4D;
+  --navBarGray: #C1C5CA;
 }
 
 input:focus {

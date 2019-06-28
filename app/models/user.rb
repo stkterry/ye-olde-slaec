@@ -18,7 +18,7 @@ class User < ApplicationRecord
   
   validates :username, :password_digest, :session_token, :email, presence: true
   validates :username, :email, uniqueness: true
-  validates :email, format: { with: VALID_EMAIL_REGEX, message: "Invalid Email"}
+  validates :email, format: { with: VALID_EMAIL_REGEX, message: "Invalid"}
   validates :password, length: { minimum: 6 }, allow_nil: true
 
   after_initialize :ensure_session_token  
@@ -27,7 +27,7 @@ class User < ApplicationRecord
   has_many :messages,
     class_name: :Message,
     primary_key: :id,
-    foreign_key: :message_id
+    foreign_key: :author_id
   
   has_many :created_channels,
     class_name: :Channel,

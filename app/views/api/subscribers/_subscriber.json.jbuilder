@@ -1,0 +1,1 @@
+json.extract! subscriber, :id, :user_id, :channel_id

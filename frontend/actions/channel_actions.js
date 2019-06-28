@@ -3,7 +3,7 @@ import {
   getChannel,
   postChannel,
   patchChannel,
-  deleteChannel 
+  deleteChannel as delChannel
 } from "../util/channel_api_util";
 
 
@@ -16,7 +16,7 @@ const receiveAllChannels = channels => ({
   channels: channels
 });
 
-const receiveChannel = dat => ({
+export const receiveChannel = dat => ({
   type: RECEIVE_CHANNEL,
   channel: dat.channel,
   users: dat.users,
@@ -40,5 +40,5 @@ export const createChannel = channel => dispatch => postChannel(channel)
 export const updateChannel = channel => dispatch => patchChannel(channel)
   .then(channel => dispatch(receiveChannel(channel)));
 
-export const deleteChannel = channelId => dispatch => deleteChannel(channelId)
+export const deleteChannel = channelId => dispatch => delChannel(channelId)
   .then( () => dispatch(removeChannel(channelId)));

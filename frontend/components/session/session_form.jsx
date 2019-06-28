@@ -6,7 +6,10 @@ import { Link, withRouter } from "react-router-dom";
 class SessionForm extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: "", password: ""}
+    this.state = { 
+      email: props.location.state ? props.location.state.email : "", 
+      password: ""
+    }
     this.handleSubmit = this.handleSubmit.bind(this);
     this.demoUser = this.demoUser.bind(this);
   };
