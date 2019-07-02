@@ -1,3 +1,15 @@
-.workspace-contents {
+#workspace-contents {
   display: flex;
+  justify-content: flex-start;
+}
+
+/* #messages-history {
+  overflow: hidden;
+  display: flex;
+  flex: 1;
+} */
+
+#workspace-contents .main-content {
+  width: 79vw;
+  flex-grow: 100;
 }

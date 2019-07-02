@@ -19,11 +19,17 @@ szczepan = User.create!(username: "Szczepan", password: "password", email:"one@t
 general = Channel.create!(name: "general", purpose: "General Discussion", created_by: szczepan.id, is_dm: false, is_private: false)
 
 channel_one = Channel.create!(name: "Lamplighters Unite!", created_by: szczepan.id, is_dm: false, is_private: false)
-channel_two = Channel.create!(name: "Tesla Fanboys", created_by: heckus.id, is_dm: false, is_private: false, purpose: "To spread the gospel of Tesla")
+channel_two = Channel.create!(name: "Tesla Fanboys", created_by: heckus.id, is_dm: false, is_private: false, purpose: "To spread the gospel of Nick Tesla", topic: "No Edison lovers pls")
 
 message_one = Message.create!(body:"Tesla Rules!", channel_id: channel_two.id, author_id: heckus.id)
 
+message_two = Message.create!(body:"This chat sure is general.", channel_id: general.id, author_id: demo_user.id)
+
+message_three = Message.create!(body:"Yep.", channel_id: general.id, author_id: heckus.id)
+
+
 subscriber_one = Subscriber.create!(user_id: heckus.id, channel_id: channel_two.id)
+subscriber_two = Subscriber.create!(user_id: hektor.id, channel_id: channel_two.id)
 
 subscriber_general_1 = Subscriber.create!(user_id: demo_user.id, channel_id: general.id)
 subscriber_general_2 = Subscriber.create!(user_id: heckus.id, channel_id: general.id)

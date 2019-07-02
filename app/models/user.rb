@@ -39,6 +39,10 @@ class User < ApplicationRecord
     primary_key: :id,
     foreign_key: :user_id
 
+  has_many :subscribed_channels,
+    through: :subscriptions,
+    source: :channel
+
   has_many :reactions,
     class_name: :Reaction,
     primary_key: :id,

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_06_27_200409) do
+ActiveRecord::Schema.define(version: 2019_07_01_174246) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -33,8 +33,8 @@ ActiveRecord::Schema.define(version: 2019_06_27_200409) do
     t.integer "thread_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["author_id"], name: "index_messages_on_author_id", unique: true
-    t.index ["channel_id"], name: "index_messages_on_channel_id", unique: true
+    t.index ["author_id"], name: "index_messages_on_author_id"
+    t.index ["channel_id"], name: "index_messages_on_channel_id"
     t.index ["thread_id"], name: "index_messages_on_thread_id"
   end
 

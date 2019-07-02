@@ -27,3 +27,31 @@
   display: flex;
   justify-content: space-between;
 }
+
+/* NavBar Channels */
+#nav_bar-channels {
+  margin: 16px 0 24px 0;
+}
+/* ChannelIndex */
+#channel-index {
+  margin: 0 -16px;
+}
+#channel-index li {
+  display: block;
+  margin: 4px 0 4px 16px;
+}
+
+
+.channel-index-item-inactive, 
+.channel-index-item-active {
+  display: inline-block;
+  width: 100%;
+  padding: 4px 0 4px 16px;
+  margin-left: -16px;
+  text-decoration: none;
+  color: var(--navBarGray);
+}
+.channel-index-item-active {
+  background: var(--navIndexBlue);
+  color: white;
+}

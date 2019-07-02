@@ -25,7 +25,7 @@ const removeMessage = messageId => ({
   messageId: messageId
 });
 
-export const fetchMessages = channelId => dispatch => getMessages(channelId, id)
+export const fetchMessages = channelId => dispatch => getMessages(channelId)
   .then(messages => dispatch(receiveAllMessages(messages)));
 
 export const fetchMessage = (channelId, id) => dispatch => getMessage(channelId, id)

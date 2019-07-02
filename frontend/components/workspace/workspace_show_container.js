@@ -14,8 +14,6 @@ import { createSubscriber, deleteSubscriber } from "../../actions/subscriber_act
 import WorkspaceShow from "./workspace_show";
 
 const mSP = (state, ownProps) => {
-  // const defChan = { id: 1000, title: "", user_ids: [] }; For future use...
-
   return ({
     channel: state.entities.channels[ownProps.match.params.channelId],
     channelId: ownProps.match.params.channelId,

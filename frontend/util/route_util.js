@@ -14,7 +14,7 @@ const Auth = ({ component: Component, path, loggedIn, exact, currentUser }) => {
     path={ path }
     exact={ exact }
     render={
-      props => !loggedIn ? (<Component {...props} />) : (<Redirect to={`/messages/${Math.min(...currentUser.subscription_ids)}`} />)
+      props => !loggedIn ? (<Component {...props} />) : (<Redirect to={`/messages/${Math.min(...currentUser.subscribed_channel_ids)}`} />)
     }
   />
 };

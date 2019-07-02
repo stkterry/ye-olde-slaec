@@ -1,6 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import TeamMenu from "./team_menu/team_menu_container";
+import ChannelIndex from "../channel/channel_index_container";
 
 
 class NavBar extends React.Component {
@@ -22,6 +23,7 @@ class NavBar extends React.Component {
 
         <div id="nav_bar-channels">
           <h1>Channels</h1>
+          <ChannelIndex />
         </div>
 
         <div id="nav_bar-channel_form">

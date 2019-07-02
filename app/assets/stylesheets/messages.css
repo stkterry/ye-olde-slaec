@@ -1,0 +1,28 @@
+
+/* .messages-indx {
+  height: 83vh;
+} */
+
+.messages-index-item {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid red;
+  width: 100%;
+  min-height: 50px;
+  padding: 6px 0;
+  box-sizing: border-box;
+}
+
+.message-gutter {
+  display:flex;
+  align-content: right;
+  justify-content: flex-end;
+  box-sizing: content-box;
+  margin-right: 8px;
+  width: 70px;
+  height: 38px; 
+}
+
+.messages-index-item-avatar {
+  height: 36px;
+}
