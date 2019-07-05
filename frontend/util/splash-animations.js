@@ -2,7 +2,7 @@
 const splashIconAnim = (iconId, dir) => {
   let icon = document.getElementById(iconId);
   let angle = 0;
-  let inc = dir * 0.025;
+  let inc = dir * 0.05;
   let id = setInterval(frame, 50);
   let x, y;
   let phase = Math.random() * 2 * Math.PI;
