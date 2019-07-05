@@ -26,6 +26,19 @@ message_one = Message.create!(body:"Tesla Rules!", channel_id: channel_two.id, a
 message_two = Message.create!(body:"This chat sure is general.", channel_id: general.id, author_id: demo_user.id)
 
 message_three = Message.create!(body:"Yep.", channel_id: general.id, author_id: heckus.id)
+message_four = Message.create!(body:"Really, really, really, really, really, really, really, really, really, really, really, really, really, really, really, really, really, really long message", channel_id: general.id, author_id: hektor.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
+Message.create!(body:"Lots a messages", channel_id: general.id, author_id: heckus.id)
 
 
 subscriber_one = Subscriber.create!(user_id: heckus.id, channel_id: channel_two.id)
@@ -35,3 +48,10 @@ subscriber_general_1 = Subscriber.create!(user_id: demo_user.id, channel_id: gen
 subscriber_general_2 = Subscriber.create!(user_id: heckus.id, channel_id: general.id)
 subscriber_general_3 = Subscriber.create!(user_id: hektor.id, channel_id: general.id)
 subscriber_general_4 = Subscriber.create!(user_id: szczepan.id, channel_id: general.id)
+
+# Direct messages temp
+
+dm_one = Channel.create!(name:"fake message", created_by: demo_user.id, is_dm: true, is_private: true)
+dm_message_one = Message.create!(body: "Oh no", channel_id: dm_one.id, author_id: demo_user.id)
+subscriber_three = Subscriber.create!(user_id: szczepan.id, channel_id: dm_one.id)
+subscriber_four = Subscriber.create!(user_id: demo_user.id, channel_id: dm_one.id)

@@ -1,0 +1,75 @@
+
+
+#new-channel-form,
+#new-direct-message-form {
+  background: white;
+  font-family: 'Noto Sans', sans-serif;
+  color: var(--channelFormBlack);
+  box-sizing: border-box;
+}
+
+#channel-form-body {
+  height: 100%;
+  width: 100%;
+  padding: 0 32px;
+  box-sizing: border-box;
+}
+
+#channel-form-content {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  text-align: left;
+
+  margin: 0 auto;
+  max-width: 767px;
+  padding-top: 96px;
+}
+
+#channel-form {
+  margin: 10px auto;
+  min-width: 500px;
+}
+
+#channel-form h1 {
+  font-size: 34px;
+  font-weight: bold;
+  margin-bottom: 16px;
+}
+/* #channel-form label {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+
+  margin-bottom: 16px;
+} */
+#channel-form input {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+  margin-top: 8px;
+  padding-left: 16px;
+  height: 40px;
+  border-radius: 4px;
+  text-align: justify;
+}
+#channel-form input::placeholder {
+  color: var(--navBarGray)
+}
+
+#channel-form button {
+  margin-top: 8px;
+  margin-right: 8px;
+}
+
+#channel-form-submit {
+  border: 1px solid black;
+  background: white;
+  color: var(--channelFormBlack);
+}
+#channel-form-cancel {
+  border: 1px solid var(--signinGreen);
+  background: var(--signinGreen);
+}
+

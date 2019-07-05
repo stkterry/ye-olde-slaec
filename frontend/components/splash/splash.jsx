@@ -7,9 +7,11 @@ import splashAnimIcon from "../../util/splash-animations";
 class Splash extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { email: ""};
+    const idxStart = 0;
+    this.state = { 
+      email: ""
+    };
     this.update = this.update.bind(this);
-
     this.handleSubmit = this.handleSubmit.bind(this);
   }
 
@@ -100,6 +102,7 @@ class Splash extends React.Component {
 
           <section className="splash-body-section">
             <h2>Put collaboration at your fingertips</h2>
+            <img src={window.splashFeature01URL} className="splash-hero-feature-img" />
           </section>
 
         </div>

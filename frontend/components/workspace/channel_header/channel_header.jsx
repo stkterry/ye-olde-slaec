@@ -4,15 +4,15 @@ import merge from "lodash/merge";
 class ChannelHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { topic: this.props.channel.topic};
+    this.state = { topic: this.props.channel.topic };
     this.submitTopicForm = this.submitTopicForm.bind(this);
     this.topicFormUpdate = this.topicFormUpdate.bind(this);
+    this.cancelTopicForm = this.cancelTopicForm.bind(this);
+    this.removeCurrentUserFromChannel = this.removeCurrentUserFromChannel.bind(this);
   }
 
   topicFormUpdate() {
-    console.log(event.target.value);
     this.setState({ topic: event.target.value })
-    console.log(this.state.topic);
   }
 
   submitTopicForm(event) {
@@ -27,6 +27,7 @@ class ChannelHeader extends React.Component {
   }
   cancelTopicForm() {
     document.getElementById("channel-header-topic-form").style.display = "none";
+    this.setState({topic: this.props.channel.topic || ""});
   }
 
   topicForm() {
@@ -38,7 +39,7 @@ class ChannelHeader extends React.Component {
             className="topic-form-text" 
             onChange={this.topicFormUpdate} defaultValue={this.state.topic}></textarea>
           <div>
-            <button type="submit" className="splash-button" onClick={this.cancelTopicForm}>Cancel</button>
+            <button type="reset" className="splash-button" onClick={this.cancelTopicForm}>Cancel</button>
             <button type="submit" className="splash-button">Set Topic</button>
           </div>
         </form>
@@ -46,11 +47,26 @@ class ChannelHeader extends React.Component {
     )
   }
 
+  removeCurrentUserFromChannel() {
+    const { channel, currentUser } = this.props;
+    this.props.deleteSubscriber(channel.id, currentUser.id);
+  }
+
   render () {
 
-    let {channel, members} = this.props;
-
+    let {channel, members, currentUser} = this.props;
     let membersDat = members.map( member => <li>{member.username}</li>)
+
+    let leaveButton = <></>
+    if (currentUser.subscribed_channel_ids.includes(channel.id)) {
+      leaveButton = <div 
+        className="leave-channel-button"
+        onClick={this.removeCurrentUserFromChannel}>
+        <h1>Leave Channel</h1>
+        {/* <i></i> */}
+      </div>
+    }
+
     return (
       <header id="channel-header">
         <div className="left-nav">
@@ -75,6 +91,7 @@ class ChannelHeader extends React.Component {
         </div>
         <div className="right-nav">
           <h1>Some Other Stuff</h1>
+          {leaveButton}
         </div>
         
         {this.topicForm()}

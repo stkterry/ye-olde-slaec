@@ -1,12 +1,13 @@
 
 .nav_bar {
   width: 223px;
-  height: 100vw;
+  min-width: 223px;
+  height: 100vh;
   background: var(--navBarBlue);
   color: var(--navBarGray);
   box-sizing: border-box;
   padding: 16px;
-
+  overflow-y: scroll;
 }
 
 #team_menu-top {
@@ -28,9 +29,13 @@
   justify-content: space-between;
 }
 
+#nav_bar-threads {
+  margin: 16px 0;
+}
+
 /* NavBar Channels */
 #nav_bar-channels {
-  margin: 16px 0 24px 0;
+  margin: 16px 0 16px 0;
 }
 /* ChannelIndex */
 #channel-index {
@@ -55,3 +60,70 @@
   background: var(--navIndexBlue);
   color: white;
 }
+
+#nav_bar-channel_form {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background: none;
+  border: none;
+  color: var(--navBarGray);
+  font-size: 16px;
+  width: 100%;
+  padding-right: 16px;
+  margin-bottom: 16px;
+  cursor: pointer;
+}
+#nav_bar-channel_form:hover {
+  background: rgba(193,197,202, 0.2);
+}
+#nav_bar-channel_form i {
+  font-size: 14px;
+  margin-right: 5px;
+}
+
+#nav_bar-new_message {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  width: 192px;
+}
+#nav_bar-new_message i {
+  font-size: 20px;
+  
+}
+
+#nav_bar-new_message *:hover {
+  color: white;
+  transition: 250ms;
+}
+
+.direct-messages-index-item {
+  cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.direct-messages-index-item:hover i {
+  display: inline-block;
+}
+
+.direct-messages-index-item a {
+  margin-right: -34px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  width: 100%;
+}
+.direct-messages-index-item i {
+  display: none;
+  font-size: 17px;
+  font-weight: normal;
+}
+.direct-messages-index-item i:hover {
+  color: white;
+}
+

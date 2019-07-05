@@ -3,9 +3,6 @@
   to { opacity: 1; }
 }
 
-.splash-body {
-}
-
 .splash-body-hero-background{
   position: absolute;
   top: 0;
@@ -160,6 +157,7 @@
 .splash-body-section > h2 {
   font-weight: bolder;
   font-size: 50px;
+  margin-bottom: 32px;
 }
 
 
@@ -173,5 +171,4 @@
   align-self: center;
   border-radius: 4px;
   text-decoration: none;
-  /* padding: 16px; */
 }

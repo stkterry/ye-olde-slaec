@@ -1,15 +1,21 @@
 import React from "react";
-
 import MessagesIndexItem from "./messages_index_item_container";
+
+
+const scrollTo = (loc) => document.getElementById(loc).scrollIntoView({ block: "end", behavior: "smooth" });
 
 class MessagesIndex extends React.Component {
 
+  componentDidMount() {
+    scrollTo("bottom")
+  }
 
+  componentDidUpdate() {
+    scrollTo("bottom")
+  }
 
   render() {
     const { messages, users } = this.props;
-    // console.log(users[messages[1].author_id]);
-    // console.log(messages[1].author_id)
     let messagesDat = messages.map( message => (
       <MessagesIndexItem 
         key={message.id}
@@ -21,11 +27,10 @@ class MessagesIndex extends React.Component {
     return (
       <div className="messages-index">
         { messagesDat }
+        <div id="bottom" ref={this.bottom}/>
       </div>
     );
   }
-
-
 };
 
 

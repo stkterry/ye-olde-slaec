@@ -14,18 +14,27 @@ class Api::ChannelsController < ApplicationController
   end
 
   def create
-    @channel = Channel.new(channel_params)
+    new_params = channel_params.except(:user_ids)
+    @channel = Channel.new(new_params)
 
-    if @channel.is_dm
-      name = @channel.subscriber_ids.map { |id| User.find_by(id: id).username }.join(", ")
-      @channel.name = name
-    end
-
+    # if @channel.is_dm
+    #   name = @channel.user_ids.map { |id| User.find_by(id: id).username }.join(", ")
+    #   @channel.name = name
+    # end
+    
     if @channel.save
-      [current_user.id].concat(@channel.subscriber_ids || []).each do |subscriber|
-        Subscriber.create(user_id: subscriber.id, channel_id: @channel.id)
+
+      if channel_params[:user_ids].empty?
+        user_ids = [current_user.id].to_i
+      else
+        user_ids = channel_params[:user_ids].map { |user_id| user_id.to_i }
+      end
+      
+      user_ids.each do |user_id|
+        Subscriber.create(user_id: user_id, channel_id: @channel.id)
       end
 
+      render :show
     else
       render json: @channel.errors.full_messages, status: 422
     end
@@ -53,7 +62,7 @@ class Api::ChannelsController < ApplicationController
   end
 
   private def channel_params
-    params.require(:channel).permit(:name, :created_by, :purpose, :topic, :is_dm, :is_private, :subscriber_ids)
+    params.require(:channel).permit(:name, :created_by, :purpose, :topic, :is_dm, :is_private, user_ids: [])
   end
 
 
