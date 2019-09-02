@@ -38,7 +38,7 @@ to it and subscribing manually.
 ![alt text](./app/assets/presentation/createDM.png)
 
 Users can also send messages directly to anyone or group of people.  Direct 
-messages are private and only viewable by the sender and reciever(s) of it.
+messages are private and only viewable by the sender and receiver(s) of it.
 
 ### Featured Technologies
   1. Javascript
