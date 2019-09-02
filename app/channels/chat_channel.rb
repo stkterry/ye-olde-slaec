@@ -13,7 +13,7 @@ class ChatChannel < ApplicationCable::Channel
       channel_id: data[:channel_id]) 
     
     socket = { type: "message", message: message }
-    ChatChanne.broadcast_to("chat_channel", socket)
+    ChatChannel.broadcast_to("chat_channel", socket)
     load
   end
 

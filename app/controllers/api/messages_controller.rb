@@ -2,6 +2,7 @@
 class Api::MessagesController < ApplicationController
 
   # before_action :require_login
+  
 
   def index
     @messages = Message.all.includes(:author)

@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter} from "react-router-dom";
 
 
 class DirectMessagesIndexItem extends React.Component {
@@ -21,7 +21,10 @@ class DirectMessagesIndexItem extends React.Component {
   }
 
   deleteDirectMessage() {
-    this.props.deleteChannel(this.props.channel.id)
+    event.preventDefault();
+    this.props.deleteChannel(this.props.channel.id);
+    let next = this.props.currentUser.subscribed_channel_ids[0];
+    this.props.history.push(`/messages/${next}`);
   }
 
   render() {
@@ -45,4 +48,4 @@ class DirectMessagesIndexItem extends React.Component {
 
 }
 
-export default DirectMessagesIndexItem;
+export default withRouter(DirectMessagesIndexItem);

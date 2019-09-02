@@ -4,7 +4,10 @@ import merge from "lodash/merge";
 class ChannelHeader extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { topic: this.props.channel.topic };
+    this.state = { topic: this.props.channel.topic, b: 2, c: 3, d: 4 };
+    // let wut = (({ topic, c }) => ({ topic, c }))(this.state);
+    // console.log(wut);
+
     this.submitTopicForm = this.submitTopicForm.bind(this);
     this.topicFormUpdate = this.topicFormUpdate.bind(this);
     this.cancelTopicForm = this.cancelTopicForm.bind(this);

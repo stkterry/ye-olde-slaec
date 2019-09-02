@@ -27,8 +27,7 @@ class MessageForm extends React.Component {
       }
     )
     this.props.createMessage(this.props.channelId, newMessage)
-    console.log(App.cable);
-    // App.cable.subscriptions.subscriptions[0].speak({message: this.state.body });
+    // App.cable.subscriptions.subscriptions[0].speak({ message: this.state.body });
     this.setState({ body: "" });
   }
   onEnterPress(event) {

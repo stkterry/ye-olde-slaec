@@ -23,7 +23,6 @@ const App = () => (
       <Route path="*" exact={true} component={LostAndFound} />
     </Switch>
 
-
   </div>
 );
 

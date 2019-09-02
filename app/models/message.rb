@@ -15,6 +15,10 @@ class Message < ApplicationRecord
 
   validates :body, presence: true
 
+  # after_create_commit do
+  #   RoomMessageCreationEventBroadcastJob.perform_later(self)
+  # end
+
   belongs_to :channel,
     class_name: :Channel,
     primary_key: :id,

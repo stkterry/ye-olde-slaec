@@ -26,6 +26,7 @@ class NavBar extends React.Component {
     this.handleSelectUser = this.handleSelectUser.bind(this);
     this.submitDirectMessageForm = this.submitDirectMessageForm.bind(this);
     this.escFunction = this.escFunction.bind(this);
+
   }
 
   escFunction(event) {
@@ -50,8 +51,8 @@ class NavBar extends React.Component {
       this.state.channelForm, 
       { created_by: this.props.currentUser.id }
     )
-    this.props.createChannel(newChannel)
-      .then(dat => that.props.history.push(`/messages/${dat.channel.id}`));
+    // this.props.createChannel(newChannel)
+    //   .then(dat => console.log('here'));
     this.cancelChannelForm();
   }
   showChannelForm() {

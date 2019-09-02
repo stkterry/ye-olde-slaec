@@ -25,7 +25,7 @@ class SubscribeForm extends React.Component {
       <footer id="messages-footer">
         <form id="messages-form" onSubmit={this.handleSubmit}>
           <h1>You're viewing {channel.name}, considering subscribing to participate!</h1>
-          <button type="submit">Subscribe!</button> 
+          <button className="action-button" type="submit">Subscribe!</button> 
         </form>
       </footer>
     )

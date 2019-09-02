@@ -8,8 +8,6 @@ import MessageForm from "../messages/message_form";
 
 import SubscribeForm from "../channel/channel_subscribe_form";
 import util from "../../util/util";
-// import App from "../app";
-
 
 class WorkspaceShow extends React.Component {
   constructor(props) {
@@ -21,37 +19,41 @@ class WorkspaceShow extends React.Component {
     this.props.fetchChannel(this.props.channelId)
       .then( () => this.setState({ loaded: true }) );
 
-    const that = this;
+    // const that = this;
 
-    App.cable.subscriptions.create(
-      { channel: "ChatChannel", id: this.props.match.params.channelId },
-      {
-        received: data => {
-          switch (data.type) {
-            case "message":
-              this.setState({
-                messages: this.state.messages.concat(data.message)
-              });
-            case "messages":
-              this.setState({
-                messages: data.messages
-              });
-            }
-          },
-          speak: function (data) {
-            data["user_id"] = that.props.currentUser.id;
-            data["channel_id"] = that.props.match.params.channelId;
+    // App.cable.subscriptions.create(
+    //   { channel: "ChatChannel", id: this.props.match.params.channelId },
+    //   {
+    //     received: data => {
+    //       switch (data.type) {
+    //         case "message":
+    //           this.setState({
+    //             messages: this.state.messages.concat(data.message)
+    //           });
+    //         case "messages":
+    //           this.setState({
+    //             messages: data.messages
+    //           });
+    //         }
+    //       },
+    //       speak: function (data) {
+    //         data["user_id"] = that.props.currentUser.id;
+    //         data["channel_id"] = that.props.match.params.channelId;
 
-            return this.perform("speak", data);
-          },
-          load: function () {
-            return this.perform("load");
-          }
-      }
-    )
+    //         return this.perform("speak", data);
+    //       },
+    //       load: function () {
+    //         return this.perform("load");
+    //       }
+    //   }
+    // )
   }
 
   componentDidUpdate(prevProps) {
+
+    if (prevProps.messages !== this.props.messages) {
+      this.setState({ messages: this.props.messages });
+    }
     if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
       this.props.fetchChannel(this.props.channelId)
         .then(() => this.setState({ loaded: true }));

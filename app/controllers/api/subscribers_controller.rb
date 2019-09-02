@@ -22,7 +22,11 @@ class Api::SubscribersController < ApplicationController
     @subscriber = Subscriber.find_by(user_id: current_user.id, channel_id: params[:channel_id])
     @channel = Channel.find_by(id: params[:channel_id])
 
+
     if @subscriber
+      Message.where(author: current_user.id).find_each do |message|
+        message.destroy
+      end
       @subscriber.destroy
       render "/api/channels/show.json.jbuilder"
     else
