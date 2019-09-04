@@ -102,7 +102,6 @@ class Splash extends React.Component {
 
           <section className="splash-body-section">
             <h2>Put collaboration at your fingertips</h2>
-            <img src={window.splashFeature01URL} className="splash-hero-feature-img" />
           </section>
 
         </div>
