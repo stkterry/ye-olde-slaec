@@ -1,5 +1,4 @@
-class RoomMessageCreationEventBroadcastJob 
-< ApplicationJob
+class RoomMessageCreationEventBroadcastJob << ApplicationJob
   queue_as :default
 
   def perform(room_message)
