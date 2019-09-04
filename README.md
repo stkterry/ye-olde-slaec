@@ -8,6 +8,20 @@ ability to create your own channels, set a channel topic, unsubscribe from a
 channel or delete your messages.  Users can even add reactions to messages or
 start a message thread.
 
+### Featured Technologies
+  1. Javascript
+  2. Ruby
+  3. PostgresSQL
+  4. HTML
+  5. SCSS/CSS
+
+### Libraries and Featured Frameworks
+  - React
+  - Redux
+  - Ruby on Rails
+  - jQuery for Ajax calls to the API
+  - User Auth through BCrypt
+
 ![alt text](./app/assets/presentation/splash-home.gif)
 
 The splash page gives you the option to sign in or sign up, putting your email
@@ -40,19 +54,28 @@ to it and subscribing manually.
 Users can also send messages directly to anyone or group of people.  Direct 
 messages are private and only viewable by the sender and receiver(s) of it.
 
-### Featured Technologies
-  1. Javascript
-  2. Ruby
-  3. PostgresSQL
-  4. HTML
-  5. SCSS/CSS
+## Code Snippets
+The front splash animation was of interest to a few peers, so here's the utility function responsible for it.
+```js
 
-### Libraries and Featured Frameworks
-  - React
-  - Redux
-  - Ruby on Rails
-  - jQuery for Ajax calls to the API
-  - User Auth through BCrypt
+const splashIconAnim = (iconId, dir) => {
+  let icon = document.getElementById(iconId);
+  let angle = 0;
+  let inc = dir * 0.05;
+  let id = setInterval(frame, 50);
+  let x, y;
+  let phase = Math.random() * 2 * Math.PI;
+  function frame() {
+    x = 20 * Math.cos(angle + phase);
+    y = 20 * Math.sin(angle + phase);
+    icon.style.transform = `translate(${x}px, ${y}px)`;
+    angle += inc;
+  }
+}
+
+export default splashIconAnim;
+```
+It's relatively compact and each call just grabs the relevant asset as placed in the html portion of the code and applies an interval function to it.  The variable `dir` is just a positive or negative 1 and is rotation direction (clockwise/anti-clockwise), with `iconId` just being the id given to the html element.  `frame()` adds a translation element to the CSS portion and is responsible for the update to location itself, `phase` is a random starting value for each icon such that they don't all start at the same location and rotate in unison.
 
 ### Site Features
   * Signup / Login with email and password
