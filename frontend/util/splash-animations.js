@@ -12,7 +12,6 @@ const splashIconAnim = (iconId, dir) => {
     icon.style.transform = `translate(${x}px, ${y}px)`;
     angle += inc;
   }
-
 }
 
 export default splashIconAnim;

@@ -27,7 +27,6 @@ form users can posts messages to the channel.
 <!-- <img src="https://github.com/favicon.ico" width="48"> -->
 <!-- <img src="./app/assets/presentation/channel.png" width="1076"> -->
 
-
 ![alt text](./app/assets/presentation/createChannel.png)
 
 Users can create a new channel, setting the topic and purpose if they'd like.

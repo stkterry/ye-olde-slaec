@@ -7,7 +7,7 @@ import MessagesIndex from "../messages/messages_index";
 import MessageForm from "../messages/message_form";
 
 import SubscribeForm from "../channel/channel_subscribe_form";
-import util from "../../util/util";
+// import util from "../../util/util";
 
 class WorkspaceShow extends React.Component {
   constructor(props) {
@@ -83,15 +83,11 @@ class WorkspaceShow extends React.Component {
           <div className="main-content">
             <ChannelHeader channel={ channel } members={channelUsers}/>
             <MessagesIndex users={channelUsers} messages={channelMessages} />
-
             {noty}
           </div>
         </nav>
       )
     } else {
-
-
-
 
       return (
         <nav id="workspace-contents">

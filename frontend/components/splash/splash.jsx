@@ -55,7 +55,7 @@ class Splash extends React.Component {
       </header>
     ):(
       <header className="splash-header">
-        <SplashDefaultLinks />
+        {/* <SplashDefaultLinks /> */}
         <nav className="splash-header-right">
           <Link className="splash-header-login" to="/login">Sign In</Link>
           <Link className="splash-header-getstarted splash-button"to="/signup">GET STARTED</Link>
