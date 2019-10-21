@@ -7,7 +7,7 @@ import MessagesIndex from "../messages/messages_index";
 import MessageForm from "../messages/message_form";
 
 import SubscribeForm from "../channel/channel_subscribe_form";
-// import util from "../../util/util";
+import util from "../../util/util";
 
 class WorkspaceShow extends React.Component {
   constructor(props) {
@@ -96,7 +96,9 @@ class WorkspaceShow extends React.Component {
         </nav>
       )
     }
+    
   }
+  
 }
 
 export default withRouter(WorkspaceShow);
