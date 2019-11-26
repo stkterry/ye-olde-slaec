@@ -138,3 +138,13 @@
   margin: 4px 0;
   cursor: pointer;
 }
+
+.team-menu-div {
+  display: flex;
+  justify-content:  space-between;
+}
+.team-menu-per {
+  font-size: 32px;
+  color: white;
+  padding: 0 8px 0 8px;
+}

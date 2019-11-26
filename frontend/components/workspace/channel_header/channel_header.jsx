@@ -93,7 +93,7 @@ class ChannelHeader extends React.Component {
           </div>
         </div>
         <div className="right-nav">
-          <h1>Some Other Stuff</h1>
+          <h1>Welcome</h1>
           {leaveButton}
         </div>
         
