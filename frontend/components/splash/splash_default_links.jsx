@@ -13,13 +13,14 @@ class SplashDefaultLinks extends React.Component {
     return (
       <>
         <SplashLogo />
-        <ul className="splash-header-links">
-          {/* <a href="https://steventerry.netlify.com/" className="nav-links-personal btn-raise">
+        <ul className="splash-header-ul">
+          {/* <a href="https://steventerry.netlify.com/" className="nav-links-per">
             <h3>Steven Terry</h3>
             <i className="fas fa-portrait" />
           </a> */}
           <a href="https://steventerry.netlify.com/" className="splash-header-per" target="_blank" rel="noopener noreferrer"><i className='fab fas fa-portrait' /></a>
           <a href="https://github.com/stkterry/quelea" className="splash-header-per" target="_blank" rel="noopener noreferrer"><i className='fab fa-github-square' /></a>
+          <a href="https://angel.co/stkterry" className="splash-header-per" target="_blank" rel="noopener noreferrer"><i className="fab fa-angellist" /></a>
           {/* <li>Why Slaec?</li>
           <li>Solutions</li>
           <li>Resources</li>

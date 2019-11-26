@@ -36,8 +36,18 @@
   padding: 16px;
 }
 
+.splash-header-ul {
+  display: flex;
+  flex-direction: row;
+}
+
 .splash-header-per > i {
   color: var(--headerGray);
   font-size: 32px;
   padding: 4px;
 }
+
+/* .nav-links-per {
+  display: flex;
+  flex-direction: row;
+} */
