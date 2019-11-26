@@ -167,3 +167,22 @@
   margin: 0 auto;
 
 }
+
+.coming-soon {
+  position: relative;
+}
+.coming-soon-message {
+  color: white;
+  border-radius: 4px;
+  padding: 4px;
+  margin: 4px 0;
+  background: var(--purple);
+  visibility: hidden;
+  position: absolute;
+  font-size: 32px;
+  top: 30px;
+  /* left: 30px; */
+}
+.coming-soon:hover .coming-soon-message {
+  visibility: visible;
+}

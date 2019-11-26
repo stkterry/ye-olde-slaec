@@ -33,6 +33,24 @@ class ChannelHeader extends React.Component {
     this.setState({topic: this.props.channel.topic || ""});
   }
 
+  // showComingSoon() {
+  //   document.getElementById("coming-soon-placeholder").style.display = "block";
+  // }
+  // hideComingSoon() {
+  //   document.getElementById("coming-soon-placeholder").style.display = "none";
+  // }
+
+  // comingSoonPlaceholder() {
+  //   return (
+  //     <div id="coming-soon-placeholder" className="modal">
+  //       <h3>Coming Soon!</h3>
+  //       <h3 onClick={this.hideComingSoon}>
+  //         Click to return
+  //       </h3>
+  //     </div>
+  //   )
+  // }
+
   topicForm() {
 
     return (
@@ -75,16 +93,19 @@ class ChannelHeader extends React.Component {
         <div className="left-nav">
           <h1 id="channel-name">#{channel.name}</h1>
           <div id="channel-header-status">
-            <div id="channel-starred-button" >
+            <div id="channel-starred-button" className="coming-soon">
               <i className="far fa-star" />
+              <span className="coming-soon-message">Coming Soon!</span>
             </div>
-            <div id="channel-members-icon" className="spacer">
+            <div id="channel-members-icon" className="spacer coming-soon">
               <i className="material-icons">person_outline</i>
               <h4>{membersDat.length}</h4>
+              <span className="coming-soon-message">Coming Soon!</span>
             </div>
-            <div id="channel-pin-count" className="spacer">
+            <div id="channel-pin-count" className="spacer coming-soon">
               <i className="fa fa-sticky-note-o"/>
               <h4>0</h4>
+              <span className="coming-soon-message">Coming Soon!</span>
             </div>
             <div id="channel-topic" className="spacer" onClick={this.showTopicForm} >
               <h4 id="channel-topic-text">{channel.topic || "Topic"}</h4>
@@ -98,6 +119,7 @@ class ChannelHeader extends React.Component {
         </div>
         
         {this.topicForm()}
+        {/* {this.comingSoonPlaceholder()} */}
       </header>
 
     )
