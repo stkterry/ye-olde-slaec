@@ -35,3 +35,9 @@
   color: var(--headerGray);
   padding: 16px;
 }
+
+.splash-header-per > i {
+  color: var(--headerGray);
+  font-size: 32px;
+  padding: 4px;
+}
