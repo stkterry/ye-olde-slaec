@@ -33,23 +33,6 @@ class ChannelHeader extends React.Component {
     this.setState({topic: this.props.channel.topic || ""});
   }
 
-  // showComingSoon() {
-  //   document.getElementById("coming-soon-placeholder").style.display = "block";
-  // }
-  // hideComingSoon() {
-  //   document.getElementById("coming-soon-placeholder").style.display = "none";
-  // }
-
-  // comingSoonPlaceholder() {
-  //   return (
-  //     <div id="coming-soon-placeholder" className="modal">
-  //       <h3>Coming Soon!</h3>
-  //       <h3 onClick={this.hideComingSoon}>
-  //         Click to return
-  //       </h3>
-  //     </div>
-  //   )
-  // }
 
   topicForm() {
 
