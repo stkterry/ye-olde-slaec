@@ -25,16 +25,19 @@ class WorkspaceShow extends React.Component {
       { channel: "ChatChannel", id: this.props.match.params.channelId },
       {
         received: data => {
-          switch (data.type) {
-            case "message":
-              this.setState({
-                messages: this.state.messages.concat(data.message)
-              });
-            case "messages":
-              this.setState({
-                messages: data.messages
-              });
-            }
+          console.log("we are here")
+          // switch (data.type) {
+          //   case "message":
+          //     this.setState({
+          //       messages: this.state.messages.concat(data.message)
+          //     });
+          //     break;
+          //   case "messages":
+          //     this.setState({
+          //       messages: data.messages
+          //     });
+          //     break;
+          //   }
           },
           speak: function (data) {
             data["user_id"] = that.props.currentUser.id;
