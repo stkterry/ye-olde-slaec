@@ -42,7 +42,7 @@ class WorkspaceShow extends React.Component {
           speak: function (data) {
             data["user_id"] = that.props.currentUser.id;
             data["channel_id"] = that.props.match.params.channelId;
-            console.log(data);
+            // console.log(data);
             return this.perform("speak", data);
           },
           load: function () {
