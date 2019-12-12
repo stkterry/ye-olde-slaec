@@ -51,8 +51,6 @@ class NavBar extends React.Component {
       this.state.channelForm, 
       { created_by: this.props.currentUser.id }
     )
-    // this.props.createChannel(newChannel)
-    //   .then(dat => console.log('here'));
     this.cancelChannelForm();
   }
   showChannelForm() {

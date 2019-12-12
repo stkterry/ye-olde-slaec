@@ -50,16 +50,8 @@ class WorkspaceShow extends React.Component {
     )
   }
 
-  componentDidUpdate(prevProps, prevState) {
+  componentDidUpdate(prevProps) {
     
-    // if (prevProps.messages !== this.props.messages) {
-    //   this.setState({ messages: this.props.messages });
-    // }
-    // if (prevState.messages !== this.state.messages) {
-    //   console.log(prevState.messages[prevState.messages.length - 1])
-    //   console.log(this.state.messages[this.state.messages.length - 1])
-    //   this.setState({ messages: this.props.messages });
-    // }
     if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
       this.props.fetchChannel(this.props.channelId)
         .then(() => this.setState({ loaded: true }));
