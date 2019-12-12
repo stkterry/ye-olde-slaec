@@ -1,4 +1,6 @@
 .nav_bar {
+  display: flex;
+  flex-direction: column;
   width: 223px;
   min-width: 223px;
   height: 100vh;
@@ -8,7 +10,10 @@
   padding: 16px;
   overflow-y: scroll;
   overflow-x: hidden;
+
+
 }
+
 
 #team_menu-top {
   display:flex;
@@ -142,6 +147,7 @@
 .team-menu-div {
   display: flex;
   justify-content:  space-between;
+  margin-top: auto;
 }
 .team-menu-per {
   font-size: 32px;

@@ -240,6 +240,12 @@ class NavBar extends React.Component {
 
         {this.directMessageForm()}
         {this.channelForm()}
+
+        <div className="team-menu-div">
+          <a href="https://steventerry.netlify.com/" className="team-menu-per" target="_blank" rel="noopener noreferrer"><i className='fab fas fa-portrait' /></a>
+          <a href="https://github.com/stkterry/quelea" className="team-menu-per" target="_blank" rel="noopener noreferrer"><i className='fab fa-github-square' /></a>
+          <a href="https://angel.co/stkterry" className="team-menu-per" target="_blank" rel="noopener noreferrer"><i className="fab fa-angellist" /></a>
+        </div>
       </div>
     )
   }
