@@ -21,35 +21,35 @@ class WorkspaceShow extends React.Component {
 
     const that = this;
 
-    // App.cable.subscriptions.create(
-    //   { channel: "ChatChannel", id: this.props.match.params.channelId },
-    //   {
-    //     received: data => {
-    //       console.log("we are here")
-    //       switch (data.type) {
-    //         case "message":
-    //           this.setState({
-    //             messages: this.state.messages.concat(data.message)
-    //           });
-    //           break;
-    //         case "messages":
-    //           this.setState({
-    //             messages: data.messages
-    //           });
-    //           break;
-    //         }
-    //       },
-    //       speak: function (data) {
-    //         data["user_id"] = that.props.currentUser.id;
-    //         data["channel_id"] = that.props.match.params.channelId;
-    //         console.log(data);
-    //         return this.perform("speak", data);
-    //       },
-    //       load: function () {
-    //         return this.perform("load");
-    //       }
-    //   }
-    // )
+    App.cable.subscriptions.create(
+      { channel: "ChatChannel", id: this.props.match.params.channelId },
+      {
+        received: data => {
+          console.log("we are here")
+          switch (data.type) {
+            case "message":
+              this.setState({
+                messages: this.state.messages.concat(data.message)
+              });
+              break;
+            case "messages":
+              this.setState({
+                messages: data.messages
+              });
+              break;
+            }
+          },
+          speak: function (data) {
+            data["user_id"] = that.props.currentUser.id;
+            data["channel_id"] = that.props.match.params.channelId;
+            console.log(data);
+            return this.perform("speak", data);
+          },
+          load: function () {
+            return this.perform("load");
+          }
+      }
+    )
   }
 
   componentDidUpdate(prevProps) {
