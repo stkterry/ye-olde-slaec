@@ -6,7 +6,6 @@ class ChatChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    
     channel = Channel.find_by(id: data['channel_id'])
 
     message = channel.messages.create(

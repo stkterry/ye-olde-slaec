@@ -64,7 +64,10 @@ class WorkspaceShow extends React.Component {
 
   render() {
     let {users, channel, currentUser} = this.props;
-    if (this.state.loaded) {
+
+    if (!this.state.loaded) return <div></div>
+
+    if (true) {
       let channelMessages = this.state.messages.filter(message => channel.id == message.channel_id );
       let channelUsers = Object.filter(users, user => user.subscribed_channel_ids.includes(channel.id));
 
