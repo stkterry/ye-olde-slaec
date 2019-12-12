@@ -1,6 +1,6 @@
 # Ye Olde Slaec 
 
-Live Project: [Ye Olde Slaec](https://ye-olde-slaec.herokuapp.com "Live Slack clone")
+Live Project: [Ye Olde Slaec](https://slaec.herokuapp.com/#/ "Live Slack clone")
 
 Ye Olde Slaec is a clone of Slack, a feature rich communication platform for
 team projects and businesses.  Slaec offers channel and direct messaging, the 
