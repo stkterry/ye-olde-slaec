@@ -19,14 +19,14 @@ class MessageForm extends React.Component {
   handleSubmit(event) {
     event.preventDefault();
     
-    let newMessage = Object.assign({}, 
-      this.state, 
-      { 
-        author_id: this.props.currentUser.id,
-        channel_id: this.props.match.params.channelId
-      }
-    )
-    this.props.createMessage(this.props.channelId, newMessage)
+    // let newMessage = Object.assign({}, 
+    //   this.state, 
+    //   { 
+    //     author_id: this.props.currentUser.id,
+    //     channel_id: this.props.match.params.channelId
+    //   }
+    // )
+    // this.props.createMessage(this.props.channelId, newMessage)
     App.cable.subscriptions.subscriptions[1].speak({ message: this.state.body });
     this.setState({ body: "" });
   }

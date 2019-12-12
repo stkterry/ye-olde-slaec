@@ -25,7 +25,6 @@ class WorkspaceShow extends React.Component {
       { channel: "ChatChannel", id: this.props.match.params.channelId },
       {
         received: data => {
-          console.log("we are here")
           switch (data.type) {
             case "message":
               this.setState({
@@ -40,9 +39,8 @@ class WorkspaceShow extends React.Component {
             }
           },
           speak: function (data) {
-            data["user_id"] = that.props.currentUser.id;
+            data["author_id"] = that.props.currentUser.id;
             data["channel_id"] = that.props.match.params.channelId;
-            console.log(data);
             return this.perform("speak", data);
           },
           load: function () {
@@ -52,11 +50,16 @@ class WorkspaceShow extends React.Component {
     )
   }
 
-  componentDidUpdate(prevProps) {
-
-    if (prevProps.messages !== this.props.messages) {
-      this.setState({ messages: this.props.messages });
-    }
+  componentDidUpdate(prevProps, prevState) {
+    
+    // if (prevProps.messages !== this.props.messages) {
+    //   this.setState({ messages: this.props.messages });
+    // }
+    // if (prevState.messages !== this.state.messages) {
+    //   console.log(prevState.messages[prevState.messages.length - 1])
+    //   console.log(this.state.messages[this.state.messages.length - 1])
+    //   this.setState({ messages: this.props.messages });
+    // }
     if (prevProps.match.params.channelId !== this.props.match.params.channelId) {
       this.props.fetchChannel(this.props.channelId)
         .then(() => this.setState({ loaded: true }));
@@ -64,13 +67,13 @@ class WorkspaceShow extends React.Component {
   }
 
   componentWillUnmount() {
-    App.cable.subscriptions.subscriptions[0].unsubscribe();
+    App.cable.subscriptions.subscriptions[1].unsubscribe();
   }
 
   render() {
-    let {messages, users, channel, currentUser} = this.props;
+    let {users, channel, currentUser} = this.props;
     if (this.state.loaded) {
-      let channelMessages = messages.filter(message => channel.id == message.channel_id );
+      let channelMessages = this.state.messages.filter(message => channel.id == message.channel_id );
       let channelUsers = Object.filter(users, user => user.subscribed_channel_ids.includes(channel.id));
 
       let noty;

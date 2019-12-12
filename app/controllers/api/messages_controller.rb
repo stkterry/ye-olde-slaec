@@ -15,12 +15,14 @@ class Api::MessagesController < ApplicationController
   end
 
   def create
+
     @message = Message.new(message_params)
     @message.author_id = current_user.id
-
     if @message.save
+      # puts "here"
       render :show
     else
+      # puts "nope"
       render json: @message.errors.full_messages, status: 422
     end
   end
