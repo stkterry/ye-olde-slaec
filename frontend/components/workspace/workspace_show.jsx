@@ -59,7 +59,7 @@ class WorkspaceShow extends React.Component {
   }
 
   componentWillUnmount() {
-    App.cable.subscriptions.subscriptions[1].unsubscribe();
+    App.cable.subscriptions.subscriptions[0].unsubscribe();
   }
 
   render() {
